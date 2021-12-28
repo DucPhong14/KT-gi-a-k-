@@ -1,0 +1,17 @@
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+#navbarTogglerDemo01 {
+  background-image: linear-gradient(to right, rgb(241, 146, 162), #dc1588);
+}
+#navbarTogglerDemo01 {
+  height: 30px;
+}
+ul {
+  margin-left: 120px;
+}
