@@ -22,7 +22,10 @@
 </head>
 
 <body>
-    <div>
+
+    <div style="display: flex;">
+        <button style="margin-right: 15%; margin-left: 20%;" onclick="window.location.href='./index.html'">Về trang
+            chủ</button>
         <h1 style=" text-align: center;">Đăng ký du lịch</h1>
     </div>
     <div class="container">
@@ -31,15 +34,22 @@
 
                 <tr>
                     <th scope="row">Họ và tên</th>
-                    <td><input type="text" id="txt_Ten"></td>
+                    <td><input type="text" id="txt_Ten" placeholder="Nguyen van a">
+                        <div id="txt_TenHelp" class="form-text"></div>
+                    </td>
+
                 </tr>
                 <tr>
                     <th scope="row">Địa chỉ</th>
-                    <td><input type="text" id="txt_DiaChi"></td>
+                    <td><input type="text" id="txt_DiaChi" placeholder="22,abc,ijk">
+                        <div id="txt_DiaChiHelp" class="form-text"></div>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">Điện thoại</th>
-                    <td><input type="text" id="txt_SDT"></td>
+                    <td><input type="text" id="txt_SDT" placeholder="0123445678">
+                        <div id="txt_SDTHelp" class="form-text"></div>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row">Khách Viện Nam</th>
@@ -51,12 +61,12 @@
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Buôn mê thuột - Gia lai - Kontum
+                                Hà Nội - Kontum
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><button class="dropdown-item">Hà Nội - Kontum</button></li>
+                                <li><button class="dropdown-item">Hà Nội - HCM</button></li>
+                                <li><button class="dropdown-item">Hà Nội - Hải Dương</button></li>
                             </ul>
                         </div>
                     </td>
@@ -64,39 +74,41 @@
                 <tr>
                     <th scope="row">Phương tiện</th>
                     <td>
-                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
-                                checked>
-                            <label class="btn btn-outline-primary" for="btnradio1"></label>
-                            Máy bay
-
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btnradio3"></label>
-                            Xe ô tô
+                        <div class="form-check">
+                            <input id="pt_MayBay" class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Máy bay
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input id="pt_Oto" class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Ô tô
+                            </label>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Số lượng khách</th>
                     <td>
-                        Nguời lớn<input type="text" name="">
-                        Trẻ em<input type="text" name="">
-
+                        Nguời lớn<input id="slg_Nguoi_lon" type="text" name="" placeholder="6">
+                        Trẻ em<input id="slg_Tre_em" type="text" name="" placeholder="3">
+                        <div id="slg_NguoiHelp" class="form-text"></div>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Ghi chú thêm</th>
-                    <td>Jacob</td>
+                    <td><input id="Ghi_chu" type="text" name="" style="width: 300px; height: 50px;"></td>
                 </tr>
                 <tr>
                     <th> <button id="bnt_Dong_y">Đồng ý</button></th>
-                    <th> <button id="bnt_Reset">Reset</button></th>
-
-                </tr>
-                <tr>
                     <th>
-                        <h5>Bạn đã đăng ký thàng công!!!</h5>
+                        <button onclick="window.location.href='./booking.html'">Reset</button>
                     </th>
+
+
 
                 </tr>
 
@@ -104,7 +116,7 @@
         </table>
 
     </div>
-
+    <h5 style=" text-align: center;" id="Thanh_cong"></h5>
 
 
 </body>
